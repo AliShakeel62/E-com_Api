@@ -7,7 +7,10 @@ require("dotenv").config()
 App.use(express.json())
 App.use("/api",apirouter)
 
-mongoose.connect(process.env.URL).then((res)=>{
+mongoose.connect(process.env.URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then((res)=>{
     App.listen( process.env.PORT, () => {
         console.log(
            res , `MongoDB is Connected Server is Listening on http://localhost:4000`

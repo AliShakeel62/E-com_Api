@@ -1,21 +1,23 @@
-const mongoose = require("mongoose") ;
+const mongoose = require("mongoose");
 const ApiSchema = new mongoose.Schema({
-    category : {
-        type : String,
-        require : [true, "category is required"]
+    category: {
+        type: String,
+        require: [true, "category is required"]
     },
-    image : {
-        type : String,
-        require : [true, "image is required"]
+    image: {
+        type: String,
+        require: [true, "image is required"]
     },
-    description : {
-        type : String,
-        require : [true, "description is required"]
+    description: {
+        type: String,
+        require: [true, "description is required"]
     },
-    price : {
-        type : Array,
-        require : [true, "price is required"]
+    price: {
+        type: Array,
+        require: [true, "price is required"]
     },
+    reviews: { type: Array },
+    overallRating :{ type: String },
     firstName: {
         type: String,
         require: [true, "firstname is required"],

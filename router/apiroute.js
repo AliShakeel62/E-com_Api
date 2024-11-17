@@ -1,45 +1,46 @@
 const express = require('express');
+const api = require("../Model/Apimodel")
 const route = express.Router();
 let arr = [
   {
     "id": 1,
     "category":"NEW Arriwal",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI5o76YeQb5elvxturs0PczbLrVSnllKQJdA&s   ",
-    description: "This classic black hoodie is a versatile and comfortable choice, ideal for everyday wear. Made from a soft and durable cotton-blend fabric, it offers both warmth and style for any season. With a relaxed fit, adjustable drawstring hood, and a spacious kangaroo pocket, it’s designed for maximum comfort and convenience. Perfect for layering and can be paired with jeans, joggers, or shorts, making it an essential staple for any casual wardrobe.",
-    "price": "49.99",
+    "description": "This classic black hoodie is a versatile and comfortable choice, ideal for everyday wear. Made from a soft and durable cotton-blend fabric, it offers both warmth and style for any season. With a relaxed fit, adjustable drawstring hood, and a spacious kangaroo pocket, it’s designed for maximum comfort and convenience. Perfect for layering and can be paired with jeans, joggers, or shorts, making it an essential staple for any casual wardrobe.",
+    "price": 49.99,
     "currency": "USD",
-    reviews: [
+    "reviews": [
       {
-        customerName: "John Doe",
-        title: "Comfortable Fit",
-        content: "I appreciate the relaxed fit and softness of the fabric, making it an excellent choice for long wear.",
+        "customerName": "John Doe",
+        "title": "Comfortable Fit",
+        "content": "I appreciate the relaxed fit and softness of the fabric, making it an excellent choice for long wear."
       },
       {
-        customerName: "Jane Smith",
-        title: "Stylish Look",
-        content: "I love the sleek, simple design, which is both classic and easy to match with other clothing.",
+        "customerName": "Jane Smith",
+        "title": "Stylish Look",
+        "content": "I love the sleek, simple design, which is both classic and easy to match with other clothing."
       },
       {
-        customerName: "Michael Johnson",
-        title: "Durability",
-        content: "The hoodie’s durability is great; it keeps its shape and color intact even after multiple washes.",
+        "customerName": "Michael Johnson",
+        "title": "Durability",
+        "content": "The hoodie’s durability is great; it keeps its shape and color intact even after multiple washes."
       },
       {
-        customerName: "Emily Brown",
-        title: "Value for Money",
-        content: "I feel this hoodie provides great quality for the price. Definitely worth it!",
+        "customerName": "Emily Brown",
+        "title": "Value for Money",
+        "content": "I feel this hoodie provides great quality for the price. Definitely worth it!"
       },
     ],
-    overallRating: "4/5",
-    price: [
+    "overallRating": "4/5" ,
+    "price": [
       {
-        range: "Standard Range",
-        amount: "$20 - $50",
+        "range": "Standard Range",
+        "amount": "$20 - $50"
       },
       {
-        range: "Premium Range",
-        amount: "$60 - $100+",
-        description: "For branded or high-quality material hoodies.",
+        "range": "Premium Range",
+        "amount": "$60 - $100+",
+        "description": "For branded or high-quality material hoodies."
       },
     ],
 
@@ -49,7 +50,7 @@ let arr = [
     "category":"NEW Arriwal",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHBZUpLJnuWNvCOx3pIuuQtlYJtBZE8K1ZXg&s",  
     "description": "These sleek black trousers are a must-have for a sharp, polished look. Made from high-quality cotton blend fabric, they offer a comfortable fit while maintaining a professional appearance. The trousers feature a classic straight-leg design, perfect for formal occasions or business settings. The waistband is equipped with belt loops, and the trousers come with multiple pockets for added convenience.",
-    "price": "39.99",
+    "price": 39.99,
     "currency": "USD",
     "reviews": [
       {
@@ -92,7 +93,7 @@ let arr = [
     "category":"NEW Arriwal",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdpL1BjXw_5Acg1hIOpCD166gGEcJmatJgGQ&s",  
     "description": "These skin-colored pants offer a sleek and versatile look, suitable for both casual and semi-formal occasions. Made with a soft, stretchable fabric, they provide comfort while maintaining a sharp silhouette. The slim fit design enhances the natural shape, and the neutral color makes them easy to pair with a variety of tops. Whether for a day out or a more polished look, these pants are a great addition to any wardrobe.",
-    "price": "29.99",
+    "price": 29.99,
     "currency": "USD",
     "reviews": [
       {
@@ -135,7 +136,7 @@ let arr = [
   "category":"NEW Arriwal",
   "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1xPNVlATnYjzBi3H5Afm6CCX4flDaKu1UjA&s",
   "description": "This classic black T-shirt is a wardrobe essential, offering both comfort and style. Made from soft, breathable cotton, it ensures a relaxed fit, perfect for everyday wear. The simple, sleek design makes it easy to pair with jeans, shorts, or joggers for a casual look. Whether you're lounging at home or out with friends, this T-shirt is versatile and always in fashion.",
-  "price": "19.99",
+  "price": 19.99,
   "currency": "USD",
   "reviews": [
     {
@@ -178,7 +179,7 @@ let arr = [
   "category":"TOP SELL",
   "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbHZjOnj7kLVGVkIo3WXG2ZCAhzq9RI0d6bA&s",
   "description": "This black T-shirt features a unique anime-inspired design, making it a perfect choice for anime fans. Made from soft, comfortable cotton, this T-shirt offers a relaxed fit that’s perfect for casual wear. The bold, vibrant graphic print adds a pop of style to your wardrobe, and it’s ideal for pairing with jeans, shorts, or skirts. Show off your love for anime while enjoying a comfortable and stylish fit.",
-  "price": "24.99",
+  "price": 24.99,
   "currency": "USD",
   "reviews": [
     {
@@ -221,7 +222,7 @@ let arr = [
   "category":"TOP SELL",
   "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-3XtGH6BQvOHsrrT321KShaY7EUjFHW7q3A&s",
   "description": "This stylish black track suit is designed for both comfort and fashion. Made from high-quality, breathable fabric, it provides a comfortable fit for both athletic and casual wear. The track suit features sleek black material with a bold design on the sides, offering a modern look. Whether you're going for a jog, heading to the gym, or just running errands, this track suit is the perfect combination of performance and style.",
-  "price": "49.99",
+  "price": 49.99,
   "currency": "USD",
   "reviews": [
     {
@@ -264,7 +265,7 @@ let arr = [
   "category":"TOP SELL",
   "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF213YH4aZY_hrq1PtZn_59ctGg11A9h1fEQ&s",
   "description": "This elegant skin-colored full-sleeve shirt is designed for both comfort and sophistication. Made from a soft, breathable fabric, it provides a comfortable fit for all-day wear. The simple yet refined design makes it perfect for both formal and semi-formal occasions. With a tailored fit and classic button-down style, it can be paired with trousers, chinos, or jeans for a polished look.",
-  "price": "34.99",
+  "price": 34.99,
   "currency": "USD",
   "reviews": [
     {
@@ -307,7 +308,7 @@ let arr = [
   "category":"TOP SELL",
   "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDxkt4twABe6frVm5UYKGcBpd2cbzhoCCl0w&s",
   "description": "These stylish black shorts for girls are perfect for casual wear and warm weather. Made from soft, breathable fabric, they offer a comfortable and relaxed fit. The simple yet trendy design makes them easy to pair with any top, whether it's a T-shirt, blouse, or tank top. Ideal for a day at the beach, a casual outing, or lounging at home, these shorts are a versatile addition to any wardrobe.",
-  "price": "19.99",
+  "price": 19.99,
   "currency": "USD",
   "reviews": [
     {
@@ -344,15 +345,42 @@ let arr = [
     }
   ]
 }
-,
+
 
 ]
 
-route.get("/",(req,res)=>{
+route.get("/",async(req,res)=>{
+  const result = await api.find();
 res.status(201).send({
   "message":"ecom api",
-  "data":arr,
+  "data":result,
   "isSucessful":true
 })  
+})
+route.post("/",async(req,res)=>{
+  const body = req.body;
+  const obj = {
+    id : body.id,
+    category : body.category,
+    image : body.image,
+    description : body.description,
+    price:body.price,
+    currency :body.currency,
+    reviews:body.reviews,
+    overallRating : body.overallRating
+  }
+  const Apimodel = new api(obj);
+await Apimodel.save().then((result)=>{
+  res.status(201).send({
+    "message":"API Successfully Created",
+    data : result 
+  })
+}).catch((err)=>{
+  res.status(201).send({
+    "message":"API UNSuccessfully ",
+    data : err 
+  })
+
+})
 })
 module.exports = route
