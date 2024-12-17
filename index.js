@@ -11,7 +11,7 @@ App.use(cors())
 
 
 App.use("/api",apirouter)
-
+App.use("/api/:id",apirouter)
 
 mongoose.connect(process.env.URL, {
     useNewUrlParser: true,

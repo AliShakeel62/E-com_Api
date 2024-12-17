@@ -1,5 +1,6 @@
 const express = require('express');
 const api = require("../Model/Apimodel")
+const ApiController = require("../Controller/ApiController") 
 const route = express.Router();
 let arr = [
   {
@@ -357,6 +358,7 @@ res.status(201).send({
   "isSucessful":true
 })  
 })
+route.get("/:id",ApiController.getbyid)
 route.post("/",async(req,res)=>{
   const body = req.body;
   const obj = {
